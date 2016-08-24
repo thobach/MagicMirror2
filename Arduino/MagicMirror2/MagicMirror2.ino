@@ -28,7 +28,7 @@
   Collects gesture events from gesture sensor APDS-9960 and distance from distance
   sensor GP2Y0A21YK (10-80cm), which are then forwarded on the serial port as text.
 
-  The circuit for an Arduino Uno or Micro:
+  The circuit for an Arduino Uno:
   * input 1: APDS-9960 on digital pin 2 (interrupt) + I2C (SDA on pin A4, SCL on pin A5) + GND & VCC (3.3V)
   * input 2: GP2Y0A21YK on analog pin 0 (analog) + GND & VCC (5V)
   * output: serial out on USB
