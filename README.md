@@ -5,13 +5,13 @@ Magic Mirror 2.0 that can be controlled by gestures, based on version 1.0 from h
 Documentation of the project (German) incl. images can be found at http://blog.thomas-bachmann.com/2016/02/magic-mirror-2-0-mit-gestensteuerung.html. An English documentation and more code projects will follow.
 
 ## Raspberry Pi 3
-# Download RASPBIAN JESSIE (not LITE) from https://www.raspberrypi.org/downloads/raspbian/
-# Follow https://www.raspberrypi.org/documentation/installation/installing-images/README.md to install the operating system on an SD card
-# Insert SD card into Raspberry Pi 3, connect monitor via HDMI, keyboard and mouse via USB and power via Micro USB
-# Now Raspberry Pi 3 boots RASPBIAN JESSIE
-# Rotate display: TBD
-# Enable SSH: in terminal enter "sudo raspi-config", go to "Advanced Config", then "ssh" and enable ssh server
-# TBC
+1.	Download RASPBIAN JESSIE (not LITE) from https://www.raspberrypi.org/downloads/raspbian/
+1.	Follow https://www.raspberrypi.org/documentation/installation/installing-images/README.md to install the operating system on an SD card
+1.	Insert SD card into Raspberry Pi 3, connect monitor via HDMI, keyboard and mouse via USB and power via Micro USB
+1.	Now Raspberry Pi 3 boots RASPBIAN JESSIE
+1.	Rotate display: TBD
+1.	Enable SSH: in terminal enter "sudo raspi-config", go to "Advanced Config", then "ssh" and enable ssh server
+1.	TBC
 
 ## Arduino
 Collects gesture events from gesture sensor APDS-9960 and distance from distance sensor GP2Y0A21YK (10-80cm), which are then forwarded on the serial port as text.
