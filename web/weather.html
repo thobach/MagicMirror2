@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>Magic Mirror 2.0</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="google" value="notranslate" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+	
+	<!-- right section -->
+	<div class="top right weather-app" ng-app="weather" id="weather" ng-controller="weatherCtrl">
+	
+		<!-- current temperature -->
+		<div class="temp">
+			<img ng-src="{{weather.now.icon}}" class="dimmed currentWeather">{{weather.now.temp}} °C
+		</div>
+		
+		<!-- weather forecast 48 hours -->
+		<div class="forecast small dimmed">
+			<table class="forecast-table">
+				<tbody>
+					<tr>
+						<td class="day">heute&nbsp;</td>
+						<td class="temp_min">{{weather.today.min}}</td>
+						<td> bis </td>
+						<td class="temp_max">{{weather.today.max}} °C</td>
+					</tr>
+					<tr>
+						<td class="day">morgen&nbsp;</td>
+						<td class="temp_min">{{weather.tomorrow.min}}</td>
+						<td> bis </td>
+						<td class="temp_max">{{weather.tomorrow.max}} °C</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<!-- weather forecast details 24 hours -->
+		<div class="forecasthourlyTemp small dimmed light"></div>
+		<div class="forecasthourlyTemp small dimmed light">
+			<canvas id="hourlyForecastTemp"></canvas>
+			<p class="chartLabel">Temperatur (°C)</p>
+		</div>
+		<div class="forecasthourlyPop small dimmed light">
+			<canvas id="hourlyForecastPop"></canvas>
+			<p class="chartLabel">Niederschlagswkt. (%)</p>
+		</div>
+		<div class="forecasthourlyQpf small dimmed light">
+			<canvas id="hourlyForecastQpf"></canvas>
+			<p class="chartLabel">Niederschlagshöhe (mm)</p>
+		</div>
+		<div class="weatherUnderground">
+			<img src="https://icons.wxug.com/logos/PNG/wundergroundLogo_4c_rev_horz.png" class="weatherUndergroundLogo" alt="weather underground logo" />
+		</div>
+		
+	</div>
+
+</div>
+
+<!-- generic libs (AngularJS, jQuery) -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+
+<!-- module customization -->
+<script src="js/config.js"></script>
+
+<!-- weather -->
+<!-- Chart.js requires jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="js/weather.js"></script>
+<script>
+	// uncomment if multiple angular apps are loaded on same page
+	// angular.bootstrap(document.getElementById("weather"), ['weather']);
+</script>
+
+</body>
+</html>

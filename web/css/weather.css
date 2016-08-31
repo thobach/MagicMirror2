@@ -1,0 +1,62 @@
+.forecast-table {
+    float: right;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.forecast-table .day,
+.forecast-table .temp_min,
+.forecast-table .temp_max {
+    text-align: right;
+}
+
+.forecast-table .day {
+    color: #999;
+}
+
+.forecasthourlyTemp,
+.forecasthourlyPop,
+.forecasthourlyQpf {
+    clear: both;
+    padding-top: 20px;
+}
+
+.forecasthourlyTemp p,
+.forecasthourlyPop p,
+.forecasthourlyQpf p {
+    margin: 0;
+    line-height: 1.3em;
+}
+
+.currentWeather {
+    margin-right: 0.2em;
+    height: 60px;
+}
+
+#hourlyForecastQpf {
+	width: 300px;
+	height: 100px;
+}
+
+#hourlyForecastPop, #hourlyForecastTemp {
+	width: 300px;
+	height: 150px;
+}
+
+p.chartLabel {
+	width: 300px;
+	text-align:center;
+	font-size: 0.8em;
+	margin-left: 20px;
+	margin-top: -10px;
+}
+
+.weatherUnderground {
+	text-align:center;
+	margin-top: 0.5em;
+}
+
+.weatherUndergroundLogo {
+	width: 70px;
+	margin-left: 20px;
+}
