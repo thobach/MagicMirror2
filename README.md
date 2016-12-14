@@ -11,7 +11,8 @@ Documentation of the project (German) incl. images can be found at http://blog.t
 1.	Now Raspberry Pi 3 boots RASPBIAN JESSIE
 1.	Rotate display: TBD
 1.	Enable SSH: in terminal enter "sudo raspi-config", go to "Advanced Config", then "ssh" and enable ssh server
-1.	TBC
+1.	TBC (how to check out web project, configure it, install Chromium, configure Chromium to auto-start in kiosk mode, install Node.js and required packages via npm, configure irsensor.js app to auto-start, etc.)
+1.	Connect Arduino via USB to Raspberry Pi, requires that Arduino is wired as described below and has the Arduino sketch from this project already installed 
 
 ## Arduino
 Collects gesture events from gesture sensor APDS-9960 and distance from distance sensor GP2Y0A21YK (10-80cm), which are then forwarded on the serial port as text.
@@ -25,6 +26,11 @@ In order to compile you'll need to copy the following libraries to Arduino's lib
 * RunningMedian library, taken from https://github.com/RobTillaart/Arduino/tree/master/libraries/RunningMedian
 * DistanceSensor library for GP2Y0A21YK, taken from https://github.com/jeroendoggen/Arduino-distance-sensor-library/tree/master/DistanceSensor
 * SparkFun_APDS9960 library for APDS-9960 gesture sensor, taken from https://github.com/sparkfun/APDS-9960_RGB_and_Gesture_Sensor
+
+## IRSensor Node.js App on Raspberry Pi 3
+Communication between Raspberry Pi and Arduino happens via the serial port (USB). The Node.js/irsensor.js app from this project creates the connection between the two systems, forwards gesture and distance events to the web user interface via WebSocket communication and also controls the HDMI display to save power if nobody has interacted with the mirror for 5 minutes.
+
+The init.d/node-app-irdistance script can be used to configure the irsensor.js app to be launched automatically on start.
 
 ## User Interface
 ### Weather Module
