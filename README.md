@@ -27,12 +27,13 @@ In order to compile you'll need to copy the following libraries to Arduino's lib
 * SparkFun_APDS9960 library for APDS-9960 gesture sensor, taken from https://github.com/sparkfun/APDS-9960_RGB_and_Gesture_Sensor
 
 ## User Interface
-This first published module is an AngularJS app that uses http://www.chartjs.org/ to display weather information from Weather Underground. See web/weather.html for details and make sure you provide your Weather Underground API key and define a weather station in web/js/config.js.
+### Weather Module
+The weather module is an AngularJS app that uses http://www.chartjs.org/ to display weather information from Weather Underground. See web/weather.html for details and make sure you provide your Weather Underground API key and define a weather station in web/js/config.js.
+
+### Date, Time and Calendar Module
+The calendar module is an AngularJS app that displays calendar events of the next two days from various calendars stored in Google Calendar. See web/calendar.html for details and make sure you provide your Google Client API key and calendars to be retrieved in web/js/config.js. When loading calendar.html the first time from a web server (e.g. via "python -m SimpleHTTPServer 8000" ran from the web directory), you'll need to authorize the website to retrieve calendar events from Google Calendar. After a browser refresh you'll see your calendar events in a tabular format.
 
 Further user interface code and documentation will follow.
 
 ## Serial Port Communication
 The code and documentation for retrieving gesture and presence events via the serial port from the Arduino Uno will follow.
-
-## Google Calendar Reader
-The code and documentation for retrieving Google Calendar events will follow.

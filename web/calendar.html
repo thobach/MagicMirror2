@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Magic Mirror 2.0</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="google" value="notranslate" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/calendar.css">
+</head>
+<body>
+	
+	<!-- left section -->
+	<div class="top left">
+	
+		<!-- first time auth -->
+		<div id="authorize-div" style="display: none">
+			<span>Authorize access to Google Calendar API</span>
+			<button id="authorize-button" onclick="handleAuthClick(event)">Authorize</button>
+		</div>
+			
+		<!-- calendar for next 48 hours -->
+		<div class="calendar calendar-app" ng-app="calendar" id="calendar">
+		
+			<div ng-controller="timeCtrl">
+				<div class="fulldate small dimmed">{{date}}</div>
+				<div class="time">{{time}}<span class="seconds small dimmed">{{seconds}}</span></div>
+			</div>
+		
+			<table class="calendar-table" ng-controller="calendarCtrl">
+		    	<tr ng-repeat="event in events">
+    				<td class="summary xxsmall">
+    					<span class="participant" 
+    						ng-repeat="participant in event.participant">
+    						{{participant}}
+    					</span>
+    					{{event.summary}}
+    				</td>
+    				<td class="dimmed date xxsmall">{{event.dateString}}</td>
+		    	</tr>
+		    </table>
+		</div>
+		
+	</div>
+
+</div>
+
+<!-- generic libs (AngularJS, jQuery) -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+<!-- module customization -->
+<script src="js/config.js"></script>
+
+<!-- calendar -->
+<!-- relative date/time formatting -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/locale/de.js"></script>
+<script src="js/calendar.js"></script>
+<!-- load this last -->
+<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+<script>
+// uncomment if multiple angular apps are loaded on same page
+// angular.bootstrap(document.getElementById("calendar"), ['calendar']);
+</script>
+</body>
+</html>
