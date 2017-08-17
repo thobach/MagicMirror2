@@ -1,3 +1,11 @@
+# Warning
+This repository is outdated and not maintained anymore. Please use https://github.com/MichMich/MagicMirror instead and my modules https://github.com/thobach/MMM-Gestures and https://github.com/thobach/MMM-WunderGround24Hours. 
+
+
+
+​
+
+
 # MagicMirror2
 Magic Mirror 2.0 that can be controlled by gestures, based on version 1.0 from https://github.com/MichMich/MagicMirror
 
